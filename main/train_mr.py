@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/content/UniVTG')
 import os
 import pdb
 import sys
@@ -15,10 +17,14 @@ import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-from main.config import BaseOptions, setup_model
-from main.dataset import \
+# from main.config import BaseOptions, setup_model
+from config import BaseOptions, setup_model
+# from main.dataset import \
+#     DatasetMR, start_end_collate_mr, prepare_batch_inputs_mr
+from dataset import \
     DatasetMR, start_end_collate_mr, prepare_batch_inputs_mr
-from main.inference_mr import eval_epoch, start_inference
+# from main.inference_mr import eval_epoch, start_inference
+from inference_mr import eval_epoch, start_inference
 from utils.basic_utils import set_seed, AverageMeter, dict_to_markdown
 from utils.model_utils import count_parameters
 
