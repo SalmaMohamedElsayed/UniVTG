@@ -99,7 +99,7 @@ else
 fi
 
 # srun --label python3 ./main/train_mr.py \
-python!git add . ./main/train_mr.py \
+python ./main/train_mr.py \
 --dset_type ${dset_type}   \
 --dset_name ${dset_name} \
 --clip_length ${clip_length} \
